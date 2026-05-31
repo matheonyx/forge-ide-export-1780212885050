@@ -1,47 +1,115 @@
 <!DOCTYPE html>
 <html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Pro - Présentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Chronometre Élégant</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+    <header class="entete">
+        <nav class="navigation">
+            <a href="#accueil" class="logo">🍎</a>
+            <ul class="liste-navigation">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#produit">iPhone Pro</a></li>
+                <li><a href="#caracteristiques">Caractéristiques</a></li>
+                <li><a href="#acheter">Acheter</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <body>
-
-        <div class="conteneur-chronometre">
-
-            <h1 class="titre-application">Chronometre</h1>
-
-            <div class="affichage-temps">
-                <span id="heures">00</span>
-                <span class="separateur">:</span>
-                <span id="minutes">00</span>
-                <span class="separateur">:</span>
-                <span id="secondes">00</span>
-                <span class="separateur">.</span>
-                <span id="millisecondes">00</span>
+    <main>
+        <section id="accueil" class="section-hero">
+            <div class="conteneur-hero">
+                <h1 class="titre-principal">iPhone Pro</h1>
+                <p class="sous-titre">L'innovation à son apogée. Découvrez une puissance inégalée.</p>
+                <a href="#produit" class="bouton-action">En savoir plus</a>
             </div>
+        </section>
 
-            <div class="conteneur-boutons">
-                <button id="boutonDemarrer" class="bouton bouton-demarrer">Démarrer</button>
-                <button id="boutonArreter" class="bouton bouton-arreter" disabled>Arrêter</button>
-                <button id="boutonReinitialiser" class="bouton bouton-reinitialiser" disabled>Réinitialiser</button>
-                <button id="boutonTour" class="bouton bouton-tour" disabled>Tour</button>
+        <section id="produit" class="section-produit">
+            <div class="conteneur-produit">
+                <div class="image-produit">
+                    <img id="image-modele" src="placeholder-bleu.png" alt="iPhone Pro">
+                </div>
+                <div class="details-produit">
+                    <h2 class="titre-modele">iPhone Pro</h2>
+                    <p class="description-modele">
+                        Conçu pour l'excellence, l'iPhone Pro redéfinit ce qui est possible avec un smartphone.
+                        Un écran Super Retina XDR, une puce A17 Bionic ultra-rapide, et un système
+                        photo professionnel pour des clichés époustouflants.
+                    </p>
+
+                    <div class="options-couleur">
+                        <h3>Couleur</h3>
+                        <div class="selecteur-couleur">
+                            <button class="bouton-couleur couleur-bleu actif" data-couleur="bleu" aria-label="Couleur Bleu"></button>
+                            <button class="bouton-couleur couleur-argent" data-couleur="argent" aria-label="Couleur Argent"></button>
+                            <button class="bouton-couleur couleur-noir" data-couleur="noir" aria-label="Couleur Noir"></button>
+                            <button class="bouton-couleur couleur-or" data-couleur="or" aria-label="Couleur Or"></button>
+                        </div>
+                    </div>
+
+                    <div class="options-stockage">
+                        <h3>Stockage</h3>
+                        <div class="selecteur-stockage">
+                            <button class="bouton-stockage actif" data-stockage="128">128 Go</button>
+                            <button class="bouton-stockage" data-stockage="256">256 Go</button>
+                            <button class="bouton-stockage" data-stockage="512">512 Go</button>
+                            <button class="bouton-stockage" data-stockage="1024">1 To</button>
+                        </div>
+                    </div>
+
+                    <div class="prix-produit">
+                        <p class="prix-actuel">À partir de <span id="prix-affichage">1199,00 €</span></p>
+                        <a href="#acheter" class="bouton-acheter">Acheter maintenant</a>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="conteneur-tours">
-                <h2 class="titre-tours">Tours</h2>
-                <ul id="listeTours" class="liste-tours">
-                    
-                </ul>
+        <section id="caracteristiques" class="section-caracteristiques">
+            <h2 class="titre-section">Caractéristiques Clés</h2>
+            <div class="grille-caracteristiques">
+                <div class="carte-caracteristique">
+                    <h3>Écran Super Retina XDR</h3>
+                    <p>Une luminosité incroyable et des couleurs éclatantes pour une immersion totale.</p>
+                </div>
+                <div class="carte-caracteristique">
+                    <h3>Puce A17 Bionic</h3>
+                    <p>La puce la plus rapide jamais intégrée à un smartphone. Des performances fulgurantes.</p>
+                </div>
+                <div class="carte-caracteristique">
+                    <h3>Système Photo Pro</h3>
+                    <p>Capturez des photos et vidéos d'une qualité professionnelle, même en basse lumière.</p>
+                </div>
+                <div class="carte-caracteristique">
+                    <h3>Autonomie Exceptionnelle</h3>
+                    <p>Profitez de votre iPhone Pro toute la journée, et bien plus encore.</p>
+                </div>
             </div>
+        </section>
 
-        </div>
+        <section id="acheter" class="section-cta">
+            <div class="conteneur-cta">
+                <h2 class="titre-cta">Prêt à passer au niveau supérieur ?</h2>
+                <p class="texte-cta">L'iPhone Pro vous attend. Commandez le vôtre dès aujourd'hui.</p>
+                <a href="#" class="bouton-action">Commander l'iPhone Pro</a>
+            </div>
+        </section>
+    </main>
 
-        <script src="script.js"></script>
+    <footer class="pied-page">
+        <p class="texte-copyright">© 2023 iPhone Pro. Tous droits réservés.</p>
+        <ul class="liens-pied-page">
+            <li><a href="#">Confidentialité</a></li>
+            <li><a href="#">Conditions d'utilisation</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </footer>
 
-    </body>
-
+    <script src="script.js"></script>
+</body>
 </html>
