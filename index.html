@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chronometre Élégant</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <div class="conteneur-chronometre">
+
+            <h1 class="titre-application">Chronometre</h1>
+
+            <div class="affichage-temps">
+                <span id="heures">00</span>
+                <span class="separateur">:</span>
+                <span id="minutes">00</span>
+                <span class="separateur">:</span>
+                <span id="secondes">00</span>
+                <span class="separateur">.</span>
+                <span id="millisecondes">00</span>
+            </div>
+
+            <div class="conteneur-boutons">
+                <button id="boutonDemarrer" class="bouton bouton-demarrer">Démarrer</button>
+                <button id="boutonArreter" class="bouton bouton-arreter" disabled>Arrêter</button>
+                <button id="boutonReinitialiser" class="bouton bouton-reinitialiser" disabled>Réinitialiser</button>
+                <button id="boutonTour" class="bouton bouton-tour" disabled>Tour</button>
+            </div>
+
+            <div class="conteneur-tours">
+                <h2 class="titre-tours">Tours</h2>
+                <ul id="listeTours" class="liste-tours">
+                    
+                </ul>
+            </div>
+
+        </div>
+
+        <script src="script.js"></script>
+
+    </body>
+
+</html>

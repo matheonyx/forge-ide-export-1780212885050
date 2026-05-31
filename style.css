@@ -1,0 +1,207 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.conteneur-chronometre {
+    background-color: #16213e;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    border: 1px solid #0f3460;
+}
+
+.titre-application {
+    font-size: 2.8em;
+    margin-bottom: 30px;
+    color: #e94560;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(233, 69, 96, 0.5);
+}
+
+.affichage-temps {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 4.5em;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    color: #ffffff;
+    background-color: #0f3460;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.affichage-temps span {
+    min-width: 60px;
+    text-align: center;
+}
+
+.affichage-temps .separateur {
+    font-size: 0.8em;
+    color: #e94560;
+    margin: 0 5px;
+}
+
+#millisecondes {
+    font-size: 0.6em;
+    opacity: 0.8;
+    min-width: 40px;
+}
+
+.conteneur-boutons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.bouton {
+    padding: 15px 25px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.bouton:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.bouton:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.bouton:disabled {
+    background-color: #3e3e3e;
+    color: #999999;
+    cursor: not-allowed;
+    opacity: 0.6;
+    box-shadow: none;
+}
+
+.bouton-demarrer {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.bouton-demarrer:hover:not(:disabled) {
+    background-color: #45a049;
+}
+
+.bouton-arreter {
+    background-color: #f44336;
+    color: white;
+}
+
+.bouton-arreter:hover:not(:disabled) {
+    background-color: #da190b;
+}
+
+.bouton-reinitialiser {
+    background-color: #ff9800;
+    color: white;
+}
+
+.bouton-reinitialiser:hover:not(:disabled) {
+    background-color: #e68a00;
+}
+
+.bouton-tour {
+    background-color: #2196F3;
+    color: white;
+}
+
+.bouton-tour:hover:not(:disabled) {
+    background-color: #0b7dda;
+}
+
+.conteneur-tours {
+    background-color: #0f3460;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+    max-height: 250px;
+    overflow-y: auto;
+    border: 1px solid #16213e;
+}
+
+.titre-tours {
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #e94560;
+    text-shadow: 0 0 5px rgba(233, 69, 96, 0.3);
+}
+
+.liste-tours {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.element-tour {
+    background-color: #1a1a2e;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.1em;
+    border-left: 5px solid #e94560;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.element-tour:last-child {
+    margin-bottom: 0;
+}
+
+.numero-tour {
+    color: #e94560;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.temps-tour {
+    color: #ffffff;
+}
+
+.conteneur-tours::-webkit-scrollbar {
+    width: 8px;
+}
+
+.conteneur-tours::-webkit-scrollbar-track {
+    background: #16213e;
+    border-radius: 10px;
+}
+
+.conteneur-tours::-webkit-scrollbar-thumb {
+    background: #e94560;
+    border-radius: 10px;
+}
+
+.conteneur-tours::-webkit-scrollbar-thumb:hover {
+    background: #d43a50;
+}
